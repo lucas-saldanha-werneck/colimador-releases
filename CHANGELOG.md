@@ -24,6 +24,11 @@ saber quantas bancadas rodam qual versao - em setembro de 2026 um bug de
 certificado deixou tecnicos parados e ninguem percebeu ate um deles escrever.
 O "?" do app diz isso na tela.
 
+*Somado no servidor em 08/set, sem mexer no app:* a lista tambem registra **de
+que PAIS veio a conexao** - so o pais. O IP e lido p/ descobrir isso e
+descartado ali mesmo: nao e guardado, nao e registrado, e nao identifica
+ninguem (o id continua sorteado, nao derivado do endereco).
+
 ## v5.7.4 — 2026-09-04
 
 Conserta o update no Windows. O app dizia "sem internet" enquanto o navegador
