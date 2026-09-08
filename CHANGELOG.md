@@ -2,6 +2,28 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.0 — 2026-09-07
+
+**A foto agora avisa que saiu.** Ate aqui a foto BOA era gravada em silencio
+- so a falha falava - entao o tecnico nao sabia se tinha apertado direito e
+apertava de novo. Agora a tela pisca 2 quadros na cor do canal e o nome do
+arquivo aparece por 2,5 s. A foto gravada sai limpa: o flash entra depois.
+
+**O aviso de versao nova ganhou reserva.** Quando o GitHub nao responde, o
+app pergunta a versao ao `pl-api.2olhares.com`. Foi esse o buraco do bug do
+certificado da v5.7.4: os aparelhos ficaram travados sem saber que existia
+versao nova. A reserva devolve SO o numero - o endereco do download continua
+cravado dentro do app, entao nada de fora pode apontar o app para outro
+arquivo.
+
+**O app passa a contar as instalacoes.** Ao abrir, manda tres coisas e nada
+mais: um id sorteado que fica no arquivo de configuracao, a versao, e o nome
+do sistema. Nunca manda nada sobre suas lentes, suas medidas, seus arquivos
+ou suas pastas, e nunca usa o IP como identificador. Serve para o suporte
+saber quantas bancadas rodam qual versao - em setembro de 2026 um bug de
+certificado deixou tecnicos parados e ninguem percebeu ate um deles escrever.
+O "?" do app diz isso na tela.
+
 ## v5.7.4 — 2026-09-04
 
 Conserta o update no Windows. O app dizia "sem internet" enquanto o navegador
