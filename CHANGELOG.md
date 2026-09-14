@@ -2,6 +2,34 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.1 — 2026-09-14
+
+**A resolucao estava travada em 1280x720, e a culpa era do app.** Um tecnico
+relatou que as tres opcoes do CONFIG - 720, 1080 e MAX - davam sempre a mesma
+imagem de 1280x720 na camera nova dele, uma industrial de 5 megapixels. Nao
+era a camera nem o driver: medimos a camera entregando 2448x2048 a 35 quadros
+por segundo, e tudo o que se pedisse a ela.
+
+O defeito era nosso. Desde a v5.7.3 o app guardava o ultimo tamanho que tinha
+dado certo, para abrir mais rapido, e pedia esse tamanho **antes** do tamanho
+que voce escolheu. Quem alguma vez tivesse ficado em 720p - por exemplo com um
+driver com problema - ficava em 720p para sempre, porque o primeiro pedido
+sempre dava certo e o app nunca chegava a tentar o tamanho maior. Trocar a
+opcao no CONFIG nao adiantava nada.
+
+Agora um tamanho **lembrado nunca passa na frente do tamanho escolhido**. E o
+MAX ficou mais rapido de quebra: em vez de descer uma lista de quatro
+tamanhos, o app pergunta de uma vez so qual e o maior que a camera tem. Se
+voce ja esta travado em 720p, esta versao destrava sozinha - nao e preciso
+mexer em nada.
+
+**O aviso de versao nova agora manda tambem o fuso horario.** Junto com o id
+sorteado, a versao e o sistema, o app passa a mandar so o deslocamento do
+relogio (por exemplo `-03:00`). Continua sem mandar nada sobre suas lentes,
+suas medidas, seus arquivos ou suas pastas. Serve para o suporte saber de que
+parte do mundo e cada bancada quando o endereco de rede engana - uma VPN troca
+o endereco, mas nao troca o relogio da maquina. O "?" do app diz isso na tela.
+
 ## v5.8.0 — 2026-09-07
 
 **A foto agora avisa que saiu.** Ate aqui a foto BOA era gravada em silencio
