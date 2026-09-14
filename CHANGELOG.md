@@ -2,6 +2,21 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.3 — 2026-09-14
+
+**O DIAG agora cronometra cada etapa do laco.** Depois da v5.8.2 a camera
+cheia de 5 megapixels subiu de 9-10 para 16 quadros por segundo, mas a
+propria camera entrega 35 quando o app so le quadros sem fazer mais nada.
+Falta tempo em algum lugar, e medir na maquina errada leva a otimizar a
+coisa errada.
+
+O CSV do DIAG ganhou cinco colunas em milissegundos - **ler**, **medir**,
+**desenhar**, **mostrar** e **esperar** - uma por quadro. Some as cinco e
+compare com 1000 dividido pelos quadros por segundo: o que sobrar e custo
+que ninguem tinha medido ainda.
+
+Nada mais mudou. **A medicao esta intocada.**
+
 ## v5.8.2 — 2026-09-14
 
 **A imagem ao vivo ficou ate 67x mais leve.** Com a resolucao destravada na
