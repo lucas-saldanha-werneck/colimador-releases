@@ -2,6 +2,34 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.4 — 2026-09-14
+
+**O app avisa quando o ROI esta grande demais.** A medida de foco roda em
+CADA pixel do retangulo que voce desenha, entao o custo sobe com a AREA
+dele. Um tecnico estava com um ROI de 2,7 megapixels - metade do sensor -
+e medir consumia 60% do tempo de cada quadro. Nada na tela dizia isso:
+arrastar um retangulo grande parecia de graca. Agora aparece um aviso com
+o tamanho. Um ROI de 400x600 faz o mesmo trabalho cerca de 35 vezes mais
+rapido - e costuma medir melhor, porque um ROI enorme mistura a regiao
+nitida com muito campo vazio.
+
+**Botao PAUSE.** Congela so a leitura ao vivo - o numero, a barra e o
+grafico - e devolve os quadros por segundo para a imagem. Enquanto esta
+pausado o botao diz MEASURE, fica preenchido, a palavra PAUSED aparece no
+video e o retangulo do ROI some. **O POINT recusa enquanto pausado**, com
+o motivo na tela: nada de gravar um ponto sem estar vendo a leitura.
+
+**Escolha do desenho da linha: CLARA ou NITIDA.** Medimos as duas maneiras
+de encolher a imagem para a tela. Com qualquer desfoque - ou seja, quase
+sempre na bancada - elas sao praticamente iguais. Em foco perfeito, numa
+linha muito fina, CLARA desenha mais claro e NITIDA desenha mais estreito.
+Qual das duas o olho prefere nao e algo que a matematica resolva, entao a
+escolha e sua, no CONFIG. **CLARA e o padrao porque NITIDA custa varias
+vezes mais tempo por quadro.**
+
+A imagem ao vivo tambem ficou um pouco mais leve. **A medicao segue
+intocada.**
+
 ## v5.8.3 — 2026-09-14
 
 **O DIAG agora cronometra cada etapa do laco.** Depois da v5.8.2 a camera
