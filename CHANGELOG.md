@@ -2,6 +2,32 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.2 — 2026-09-14
+
+**A imagem ao vivo ficou ate 67x mais leve.** Com a resolucao destravada na
+v5.8.1, um tecnico chegou a camera cheia de 5 megapixels e caiu para 9-10
+quadros por segundo - enquanto o programa da propria camera fazia 38. A
+camera nao era o problema: medimos 35 quadros por segundo lendo dela pelo
+mesmo caminho, sem processar nada.
+
+O gargalo era nosso, e nem era a medicao. Encolher a imagem para caber na
+tela custava **47 milissegundos por quadro**; a medicao de foco, que e a
+razao de existir do app, custava **0,3**. Fazer a figura caber gastava 150
+vezes mais que medir.
+
+Trocamos o metodo de encolhimento por um equivalente 67 vezes mais rapido.
+Linha muito fina pode cintilar de leve quando a imagem e bastante reduzida -
+e so na tela: **a medicao le sempre a imagem crua e nao mudou em nada**.
+
+Isso tambem vale para quem nunca usou a resolucao maxima: a 1920x1080 o
+metodo antigo ja consumia dois tercos do tempo disponivel por quadro.
+
+**Duas redes de teste que nao pegavam nada.** Uma revisao adversarial
+mostrou que duas correcoes antigas podiam ser desfeitas sem que nenhum teste
+reclamasse: o portao de qualidade do FIT e os anexos do relatorio. Nada
+estava quebrado - mas nada impediria que quebrasse. As duas ficaram
+guardadas.
+
 ## v5.8.1 — 2026-09-14
 
 **A resolucao estava travada em 1280x720, e a culpa era do app.** Um tecnico
