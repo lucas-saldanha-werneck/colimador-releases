@@ -2,6 +2,30 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.8 — 2026-09-15
+
+**Esta versao nao conserta nada. Ela passa a ANOTAR.**
+
+Em alguns computadores a tela do app aparece duplicada e deslocada ao
+abrir, e os botoes ficam dificeis de acertar. Ja tentamos consertar isso
+duas vezes, mandando a janela se repintar. Nao resolveu.
+
+Descobrimos o motivo de estarmos no escuro: a parte do app que manda a
+janela repintar **nunca disse se conseguiu**. Se ela nao encontrasse a
+janela, ficava tudo em silencio, e o defeito continuava parecendo o mesmo
+por fora. Em tres versoes ninguem soube se aquele conserto sequer rodava.
+
+Agora o app anota no arquivo de registro (log) o que aconteceu: se
+encontrou a janela, se a janela e mesmo dele, o tamanho dela, a escala de
+tela do monitor e o que o Windows respondeu. Uma linha por situacao, nao
+uma enxurrada.
+
+**O que isso muda para voce:** nada na tela e nada na medicao. Mas se a
+tela duplicar de novo, **mande um relato pelo app** (`?` → ENVIAR
+RELATO, pode mandar sem escrever nada). O registro vai junto, e dessa vez
+ele diz onde esta o problema. O proximo conserto sai com base, e nao com
+palpite.
+
 ## v5.8.7 — 2026-09-15
 
 **O app passou a apontar para o endereco atual do projeto no GitHub.** A conta
