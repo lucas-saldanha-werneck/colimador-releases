@@ -2,6 +2,20 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.7 — 2026-09-15
+
+**O app passou a apontar para o endereco atual do projeto no GitHub.** A conta
+mudou de nome, e o GitHub redireciona o nome antigo — por isso nada quebrou, e
+as versoes ate a 5.8.6 continuam se atualizando normalmente.
+
+Esse redirecionamento nao e garantido para sempre: pela propria documentacao
+do GitHub, ele para de funcionar se alguem registrar o nome antigo e criar um
+repositorio com o mesmo nome. Esta versao tira o app dessa dependencia. Um
+teste novo garante que **nenhum** dos enderecos (checagem de versao, download,
+manual) fique para tras numa troca dessas — meia-troca ja aconteceu aqui antes.
+
+Nada mudou na tela nem na medicao.
+
 ## v5.8.6 — 2026-09-15
 
 **O app abre cerca de 5 segundos mais rapido.** Medimos passo a passo a
