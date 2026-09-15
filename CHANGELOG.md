@@ -2,6 +2,30 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.5 — 2026-09-15
+
+**A imagem ao vivo ficou um pouco mais leve.** O app convertia o quadro
+inteiro da camera para cor e so depois recortava e encolhia para caber na
+tela - ou seja, trabalhava em pixels que jogaria fora na linha seguinte.
+Agora recorta e encolhe primeiro, e converte por ultimo.
+
+O ganho depende do modo, e e honesto dizer o tamanho dele: no modo
+**NITIDA** economiza cerca de 6,4 milissegundos por quadro, o que pode
+valer um salto de verdade; no modo **CLARA**, que e o padrao, economiza
+menos de 1 milissegundo. Em maquinas rapidas voce nao vai notar. Em
+maquina lenta, que esta bem no limite de acompanhar a tela, um
+milissegundo as vezes decide.
+
+A imagem na tela continua a mesma: a diferenca maxima e de 1 nivel de
+cinza em 255, que e arredondamento. **A medicao nao passa por aqui e nao
+mudou.**
+
+**O DIAG passou a anotar duas coisas sobre a sua tela.** A taxa de
+atualizacao do monitor, e quanto custa esperar por eventos quando nao ha
+quadro novo para mostrar. Juntas, elas dizem se o limite de quadros por
+segundo vem do monitor - caso em que nao ha o que fazer - ou de outra
+coisa, caso em que ha. Serve so para diagnostico; nao muda nada no uso.
+
 ## v5.8.4 — 2026-09-14
 
 **O app avisa quando o ROI esta grande demais.** A medida de foco roda em
