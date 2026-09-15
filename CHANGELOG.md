@@ -2,6 +2,43 @@
 
 Manual: [Collimator-VCurve-Manual.pdf](Collimator-VCurve-Manual.pdf)
 
+## v5.8.6 — 2026-09-15
+
+**O app abre cerca de 5 segundos mais rapido.** Medimos passo a passo a
+abertura da camera no tablet do Lucas: ela levava 9,5 segundos, e um unico
+passo respondia por 43% disso. O app pedia o tamanho da imagem a camera
+uma segunda vez, "para garantir" — mas o tamanho ja estava certo, e nessa
+maquina cada pedido desses custa mais de um segundo.
+
+Agora esse pedido so acontece quando pode servir para alguma coisa: quando
+a camera **nao entregou exatamente** a resolucao pedida. Nesse caso o pedido
+extra continua igual ao de antes — e ele que corrige a camera que entrega 15
+quadros por segundo em vez de 30. Quando a camera entrega de primeira o
+tamanho certo, o app nao pede nada e voce economiza a espera. Trocar a
+resolucao no CONFIG tambem ficou mais rapido pelo mesmo motivo.
+
+Dois avisos honestos. Quem usa a resolucao **MAX** nao ganha esse tempo: ali
+o app pede de proposito um tamanho impossivel para descobrir o teto da
+camera, entao sempre houve negociacao e o pedido extra continua necessario.
+E o ganho foi medido em **uma** maquina; em camera e computador diferentes
+o numero muda.
+
+**O CONFIG responde ao seu toque na hora.** Trocar a resolucao ou a camera
+reabre o dispositivo, e isso pode levar mais de 10 segundos. Antes a tela
+ficava parada o tempo todo, sem nenhum sinal de que o toque tinha pegado —
+entao era natural tocar de novo. Agora aparece **"trocando camera..."**
+assim que voce toca.
+
+**Menos chance da tela "duplicada" na abertura.** Em alguns computadores
+com video Intel, a primeira abertura depois de uma atualizacao mostrava a
+interface duplicada e deslocada, o que deixava os botoes dificeis de
+acertar. O app ja mandava a janela se repintar uma vez ao abrir; agora
+insiste por alguns segundos, porque a foto do problema mostra numeros **ao
+vivo** duplicados — ou seja, a falha passa do momento da abertura.
+
+**A medicao nao mudou.** Nada aqui toca o Tenengrad, o PONTO, o CSV ou o
+FIT.
+
 ## v5.8.5 — 2026-09-15
 
 **A imagem ao vivo ficou um pouco mais leve.** O app convertia o quadro
